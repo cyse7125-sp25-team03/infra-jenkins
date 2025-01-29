@@ -1,5 +1,5 @@
 #VPC
-resource "aws_vpc" "jenkins_vpc" {
+resource "aws_vpc" "vpc_jenkins" {
   cidr_block = var.vpc_cidr
 
   tags = {
@@ -13,7 +13,7 @@ data "aws_availability_zones" "available" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id            = aws_vpc.jenkins_vpc.id
+  vpc_id            = aws_vpc.vpc_jenkins.id
   cidr_block        = var.public_subnet_cidr
   availability_zone = data.aws_availability_zones.available.names[0]
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "public_subnet" {
 
 #internet gateway
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.jenkins_vpc.id
+  vpc_id = aws_vpc.vpc_jenkins.id
 
   tags = {
     Name = "igw-${var.environment}"
@@ -33,7 +33,7 @@ resource "aws_internet_gateway" "igw" {
 
 #route table
 resource "aws_route_table" "public_subnet_rt" {
-  vpc_id = aws_vpc.jenkins_vpc.id
+  vpc_id = aws_vpc.vpc_jenkins.id
 
   route {
     cidr_block = var.internet_cidr

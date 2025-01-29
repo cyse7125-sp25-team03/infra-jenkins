@@ -24,7 +24,6 @@ variable "vpc_cidr" {
 variable "public_subnet_cidr" {
   description = "CIDR for public subnet"
   type        = string
-  default     = "10.0.1.0/24"
 }
 
 variable "az_state" {
@@ -37,4 +36,18 @@ variable "internet_cidr" {
   description = "CIDR for internet"
   type        = string
   default     = "0.0.0.0/0"
+}
+#ec2 module vars
+variable "ec2_instance_type" {
+  description = "EC2 Instance Type"
+  type        = string
+  default     = "t2.micro"
+}
+variable "ami_filter" {
+  description = "AMI Prefix to be filtered across list of AMIs"
+  type        = string
+}
+variable "eip_tag_name" {
+  description = "Tag Name of Elastic IP to filter eip"
+  type        = string
 }
