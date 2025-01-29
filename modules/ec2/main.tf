@@ -1,6 +1,6 @@
 data "aws_ami" "ami_jenkins" {
-  most_recent      = true
-  owners           = ["self"] #TODO: Account ID
+  most_recent = true
+  owners      = ["self"] #TODO: Account ID
 
   filter {
     name   = "name"
@@ -24,7 +24,7 @@ data "aws_eip" "eip_jenkins" {
 }
 #NIC
 resource "aws_network_interface" "nic_jenkins" {
-  subnet_id   = var.public_subnet_id
+  subnet_id       = var.public_subnet_id
   security_groups = [aws_security_group.sec_group_jenkins.id]
   tags = {
     Name = "primary_network_interface"
@@ -32,12 +32,12 @@ resource "aws_network_interface" "nic_jenkins" {
 }
 resource "aws_eip_association" "eip_assoc" {
   network_interface_id = aws_network_interface.nic_jenkins.id
-  allocation_id = data.aws_eip.eip_jenkins.id
+  allocation_id        = data.aws_eip.eip_jenkins.id
 }
 # Security Group
 resource "aws_security_group" "sec_group_jenkins" {
-  name        = "sec_group_jenkins"
-  vpc_id      = var.vpc_jenkins_id
+  name   = "sec_group_jenkins"
+  vpc_id = var.vpc_jenkins_id
 
   tags = {
     Name = "sec_group_jenkins"
@@ -77,13 +77,13 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 resource "aws_instance" "vm_jenkins" {
   ami           = data.aws_ami.ami_jenkins.id
   instance_type = var.ec2_instance_type
-    user_data = filebase64("${path.module}/userdata.sh")
+  user_data     = filebase64("${path.module}/userdata.sh")
   network_interface {
     network_interface_id = aws_network_interface.nic_jenkins.id
     device_index         = 0
   }
-    tags = {
-        Name = "Jenkins VM"
-    }
+  tags = {
+    Name = "Jenkins VM"
+  }
 }
 
