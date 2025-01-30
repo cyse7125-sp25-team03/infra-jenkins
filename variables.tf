@@ -51,3 +51,12 @@ variable "eip_tag_name" {
   description = "Tag Name of Elastic IP to filter eip"
   type        = string
 }
+#userdata
+variable "cert_email" {
+  description = "Email associated with the cert"
+  type = string
+}
+variable "jenkins_domain" {
+  description = "Domain name of jenkins server"
+  type = string
+}
