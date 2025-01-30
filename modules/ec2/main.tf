@@ -76,9 +76,9 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 resource "aws_instance" "vm_jenkins" {
   ami           = data.aws_ami.ami_jenkins.id
   instance_type = var.ec2_instance_type
-  user_data     = base64encode("${templatefile("${path.module}/userdata.sh", {
-    SERVER_NAME   = "${var.jenkins_domain}"
-    CERT_EMAIL    = "${var.cert_email}"
+  user_data = base64encode("${templatefile("${path.module}/userdata.sh", {
+    SERVER_NAME = "${var.jenkins_domain}"
+    CERT_EMAIL  = "${var.cert_email}"
   })}")
   network_interface {
     network_interface_id = aws_network_interface.nic_jenkins.id

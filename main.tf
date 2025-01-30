@@ -16,7 +16,7 @@ module "ec2" {
   vpc_cidr           = var.vpc_cidr
   public_subnet_cidr = var.public_subnet_cidr
   internet_cidr      = var.internet_cidr
-  environment = var.environment
-  jenkins_domain = var.jenkins_domain
-  cert_email = var.cert_email
+  environment        = var.environment
+  jenkins_domain     = var.jenkins_domain
+  cert_email         = var.cert_email
 }

@@ -54,9 +54,9 @@ variable "eip_tag_name" {
 #userdata
 variable "cert_email" {
   description = "Email associated with the cert"
-  type = string
+  type        = string
 }
 variable "jenkins_domain" {
   description = "Domain name of jenkins server"
-  type = string
+  type        = string
 }
