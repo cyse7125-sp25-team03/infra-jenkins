@@ -3,12 +3,14 @@
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Amazon Web Services](https://img.shields.io/badge/Amazon%20Web%20Services-232F3E.svg?style=for-the-badge&logo=Amazon-Web-Services&logoColor=white)
 ![Amazon EC2](https://img.shields.io/badge/Amazon_EC2-FF9900.svg?style=for-the-badge&logo=amazon-ec2&logoColor=white)
+![Amazon Route 53](https://img.shields.io/badge/Amazon%20Route%2053-8C4FFF.svg?style=for-the-badge&logo=Amazon-Route-53&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Let's Encrypt](https://img.shields.io/badge/Let's_Encrypt-003A70.svg?style=for-the-badge&logo=letsencrypt&logoColor=white)
-![Amazon Route 53](https://img.shields.io/badge/Amazon%20Route%2053-8C4FFF.svg?style=for-the-badge&logo=Amazon-Route-53&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/Shell_Script-121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Namecheap](https://img.shields.io/badge/Namecheap-DE3723.svg?style=for-the-badge&logo=Namecheap&logoColor=white)
 
 ## Overview
 
